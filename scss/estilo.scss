@@ -1,0 +1,29 @@
+@import "variables";
+@import "header";
+@import "main";
+@import "footer";
+@import "index";
+@import "servicios";
+@import "quienessomos";
+@import "turnos";
+@import "contacto";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Farsan-Regular";
+    background-image: url(../img/fondo-textura-pizarra-marmol-purpura.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed, scroll;
+    width: 100% auto;
+}
+
+@font-face {
+    font-family: "Farsan-Regular";
+    src: url("../fuente/Farsan/Farsan-Regular.ttf");
+}

@@ -1,0 +1,20 @@
+/*servicios.html*/
+
+.tituloServicio {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cards {
+    box-shadow: 0 0 20px $color-iluminaciones;
+    transition: all 2s;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.botonCard {
+    background-color: $color-rosado;
+}
+

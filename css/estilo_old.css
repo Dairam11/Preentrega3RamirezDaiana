@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Farsan-Regular";
+    background-image: url(../img/fondo-textura-pizarra-marmol-purpura.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed, scroll;
+    width: 100% auto;
+    
+}
+
+@font-face {
+    font-family: "Farsan-Regular";
+    src: url("../fuente/Farsan/Farsan-Regular.ttf");
+}
+
+/*header*/
+header {
+    text-align: center;
+    background-color: rgb(191, 171, 171);
+}
+
+.logonav {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.fondoNav {
+    background: linear-gradient(to right, #736666,#e0b3b3);
+    width: 100% auto;
+    height: 10%;
+}
+
+.miBarra li a {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.miBarra li a:hover {
+    background-color: #c0abab;
+    border-radius: 15px;
+}
+
+h1 {
+    color: rgb(71, 65, 59);
+    text-shadow: 0 0 20px white;
+    text-align: center;
+    font-style: bold;
+    font-size: 2.5rem;
+    margin: 10px;
+}
+h2 {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+/*main*/
+main {
+    text-align: center;
+}
+
+/*index*/
+.grillaContainer {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "uno lista dos";
+}
+
+.caja {
+    align-content: center;
+    justify-content: center;
+    width: 100% auto;
+
+}
+
+.lista {
+    grid-area: lista;
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    background-color: rgb(233, 224, 224);
+
+}
+
+.uno {
+    grid-area: uno;
+    align-self: center;
+    justify-self: center;
+}
+.nails{
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    
+}
+
+.dos {
+    grid-area: dos;
+    border-radius: 20px;
+    justify-self: center;
+    align-self: center;
+}
+
+.video {
+    width: 55%;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    transition: all 2s;
+}
+.video:hover{
+    transform: scale(1.1,1.1)
+}
+
+.listaItem {
+    background-color: rgb(233, 224, 224);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .grillaContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "uno lista"
+            "dos dos";
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .grillaContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "uno"
+            "lista"
+            "dos";
+    }
+
+    .titulo {
+        font-size: 1;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+
+/*servicios.html*/
+.tituloServicio {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cards {
+    box-shadow: 0 0 20px rgb(181, 171, 146);
+    transition: all 2s;
+}
+.cards:hover{
+    transform: scale(1.1,1.1)
+}
+
+.botonCard {
+    background-color: rgb(192, 171, 171);
+}
+
+/*quienesomos*/
+.quienSoy {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "texto1 perfil"
+        "texto2 texto2";
+}
+
+.soy {
+    margin: 10px auto;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.soy h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.perfil {
+    grid-area: perfil;
+    width: 80%;
+    border-radius: 40%;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.texto1 {
+    grid-area: texto1;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.texto2 {
+    grid-area: texto2;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .quienSoy {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "texto1 texto1"
+            "perfil perfil"
+            "texto2 texto2";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quienSoy {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "texto1"
+            "perfil"
+            "texto2";
+    }
+}
+
+/*turnos*/
+.salonPadre {
+    display: grid;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+        "nuestro nuestro"
+        "parrafo1 ubicacion"
+        "parrafo2 ubicacion";
+}
+
+.salon {
+    justify-content: center;
+    align-content: center;
+}
+
+.nuestro {
+    grid-area: nuestro;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nuestro h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parrafo1 {
+    grid-area: parrafo1;
+    justify-items: center;
+    align-items: center;
+}
+
+.parrafo1 h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+
+.parrafo1 p {
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.parrafo2 {
+    grid-area: parrafo2;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.parrafo2 p {
+    font-weight: bold;
+}
+
+.linkWhatsapp {
+    width: 12%;
+    animation-name: anima;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+@keyframes anima{
+    0%{
+        width: 12%;
+    }
+    50%{
+        width: 14%;
+    }
+    100%{
+        width:12%;
+    }
+}
+
+.ubicacion {
+    grid-area: ubicacion;
+    justify-items: center;
+    align-items: center;
+}
+
+.ubicacion h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.maps {
+    width: 50vh;
+    height: 50vh;
+    border: solid 5px #c0abab;
+}
+
+@media screen and (max-width: 768px) {
+    .salonPadre {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas:
+            "nuestro nuestro"
+            "parrafo1 parrafo2"
+            "ubicacion ubicacion";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .salonPadre {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 2fr;
+        grid-template-areas:
+            "nuestro"
+            "parrafo1"
+            "parrafo2"
+            "ubicacion";
+    }
+}
+
+/*contacto*/
+.padreContacto {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "div1 div1 div1"
+        "div2 formulario div3";
+}
+
+.contacto {
+    width: auto;
+}
+
+.div1 {
+    grid-area: div1;
+}
+
+.formulario {
+    grid-area: formulario;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(233, 224, 224);
+    border-radius: 3px;
+    border: solid 3px rgb(192, 171, 171);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div2 {
+    grid-area: div2;
+}
+
+.div3 {
+    grid-area: div3;
+}
+
+.div3 h3 {
+    text-align: center;
+    font-weight: bold;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: aparece;
+}
+@keyframes aparece{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.listaContacto {
+    list-style: none;
+}
+
+.listaContacto li {
+    text-decoration: none;
+    text-align: center;
+}
+
+.listaContacto li a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(71, 65, 59);
+    font-size: 1.5rem;
+}
+
+.listaContacto li a:hover {
+    background-color: rgb(192, 171, 171);
+    color: black;
+}
+
+.fotoUltima {
+    width: 70%;
+    margin: 3px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 8px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .padreContacto {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas:
+            "div1 div1"
+            "div2 formulario"
+            "div3 div3";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .padreContacto {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+            "div1"
+            "formulario"
+            "div2"
+            "div3";
+    }
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    background-color: rgb(192, 171, 171);
+}
+
+.logoFooter {
+    width: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.menufooter {
+    list-style: none;
+    margin: 7px auto;
+    text-align: center;
+}
+
+.menufooter li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menufooter li a {
+    padding: 7px;
+    margin: 7px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.textoFooter {
+    font-size: 1.2rem;
+}
+
+.redes {
+    width: 30px;
+}

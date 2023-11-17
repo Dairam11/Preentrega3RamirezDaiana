@@ -1,0 +1,118 @@
+/*turnos*/
+
+.salonPadre {
+    display: grid;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "nuestro nuestro" "parrafo1 ubicacion" "parrafo2 ubicacion";
+}
+
+.salon {
+    justify-content: center;
+    align-content: center;
+}
+
+.nuestro {
+    grid-area: nuestro;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.parrafo1 {
+    grid-area: parrafo1;
+    justify-items: center;
+    align-items: center;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        justify-items: center;
+        align-items: center;
+    }
+
+    p {
+        justify-items: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.parrafo2 {
+    grid-area: parrafo2;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+    p {
+        font-weight: bold;
+    }
+}
+
+.linkWhatsapp {
+    width: 12%;
+    animation-name: anima;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes anima {
+    0% {
+        width: 12%;
+    }
+
+    50% {
+        width: 14%;
+    }
+
+    100% {
+        width: 12%;
+    }
+}
+
+.ubicacion {
+    grid-area: ubicacion;
+    justify-items: center;
+    align-items: center;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.maps {
+    width: 50vh;
+    height: 50vh;
+    border: solid 5px $color-rosaoscuro;
+}
+
+@media screen and (max-width: 768px) {
+    .salonPadre {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas: "nuestro nuestro" "parrafo1 parrafo2" "ubicacion ubicacion";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .salonPadre {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 2fr;
+        grid-template-areas: "nuestro" "parrafo1" "parrafo2" "ubicacion";
+    }
+}

@@ -1,0 +1,110 @@
+/*contacto*/
+
+.padreContacto {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "div1 div1 div1" "div2 formulario div3";
+}
+
+.contacto {
+    width: auto;
+}
+
+.div1 {
+    grid-area: div1;
+}
+
+.formulario {
+    grid-area: formulario;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: $color-rosado;
+    border-radius: 3px;
+    border: solid 3px $color-rosaoscuro;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div2 {
+    grid-area: div2;
+}
+
+.div3 {
+    grid-area: div3;
+
+    h3 {
+        text-align: center;
+        font-weight: bold;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: aparece;
+    }
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.listaContacto {
+    list-style: none;
+
+    li {
+        text-decoration: none;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: $color-oscuro;
+            font-size: 1.5rem;
+
+            &:hover {
+                background-color: $color-rosaoscuro;
+                color: black;
+            }
+        }
+    }
+}
+
+.fotoUltima {
+    width: 70%;
+    margin: 3px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 8px $color-iluminaciones
+}
+
+@media screen and (max-width: 768px) {
+    .padreContacto {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas: "div1 div1" "div2 formulario" "div3 div3";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .padreContacto {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas: "div1" "formulario" "div2" "div3";
+    }
+}

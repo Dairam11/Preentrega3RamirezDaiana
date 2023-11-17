@@ -1,0 +1,72 @@
+/*quienesomos*/
+
+.quienSoy {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "texto1 perfil" "texto2 texto2";
+}
+
+.soy {
+    margin: 10px auto;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+.perfil {
+    grid-area: perfil;
+    width: 80%;
+    border-radius: 40%;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.texto1 {
+    grid-area: texto1;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.texto2 {
+    grid-area: texto2;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .quienSoy {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "texto1 texto1" "perfil perfil" "texto2 texto2";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quienSoy {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "texto1" "perfil" "texto2";
+    }
+}
